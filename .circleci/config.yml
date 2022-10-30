@@ -16,6 +16,8 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache:
+          command: |
+            cd ~/repo
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
             # fallback to using the latest cache if no exact match is found
